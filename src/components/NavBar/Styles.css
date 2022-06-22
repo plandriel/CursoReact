@@ -53,9 +53,9 @@ nav {
     height: 80px; }
 
 /*CARRITO*/
-.carrito {
-    margin: 20px;
-}
+/* .carrito {
+    margin: 10px;
+} */
 
 /* H1 HEADER TITULO */
 
@@ -81,3 +81,17 @@ nav {
         font-size: 30px;
         font-weight: 300;
         animation-duration: 2s; }
+
+nav .enlaces a {
+    display: inline-block;
+    padding: 5px 0;
+    margin-right: 17px;
+    font-size: 17px;
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: inherit; }
+    
+    nav .enlaces a:hover {
+    border-bottom: 3px solid #ff6b09;
+    transition: 0.6s; }
