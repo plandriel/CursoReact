@@ -3,17 +3,19 @@ import React from "react";
 import "./Styles.css"
 import shopcart from "../../assets/cartshop.png"
 
+
+
+
 function totalcarrito(){
-    console.log("boton carrito");
 }
 
 const CartWidget = () => {
     return (
         <il className="cart-btn"> 
             <button onClick={totalcarrito}>
-                <img src={shopcart} alt="Icono carrito" className="cart-widget" />
-                <p>4</p>
+                <img src={shopcart} alt="Icono carrito" className="cart-widget" /> <span>4</span>
             </button>
+            {/* <p>4</p> */}
             
             
         </il>

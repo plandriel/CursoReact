@@ -34,10 +34,8 @@
     width: 40px;
 }
 
-.cart-btn p {
+.cart-btn span {
     position: absolute;
-    top: -12px;
-    right: -18px;
     padding: 0.1rem;
     min-width: 2rem;
     background-color: rgb(255, 21, 0);

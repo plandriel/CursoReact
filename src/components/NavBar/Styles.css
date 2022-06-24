@@ -65,22 +65,23 @@ nav {
     padding: 23.5px 20px; }
     
     .textos {
-    width: 100%;
-    height: 100%;
-    display: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    overflow: hidden;
-    text-align: center; }
-    .textos h1 {
-        font-size: 80px;
-        animation-duration: 1s; }
-    .textos h2 {
-        font-size: 30px;
-        font-weight: 300;
-        animation-duration: 2s; }
+        display: flex;
+        width: 100%;
+        height: 100%;
+        display: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        overflow: hidden;
+        text-align: center; }
+        .textos h1 {
+            font-size: 80px;
+            animation-duration: 1s; }
+        .textos h2 {
+            font-size: 30px;
+            font-weight: 300;
+            animation-duration: 2s; }
 
 nav .enlaces a {
     display: inline-block;

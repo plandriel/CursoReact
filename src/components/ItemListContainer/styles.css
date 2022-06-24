@@ -1,7 +1,13 @@
-.landing {
+/* .landing {
     width: 100%;
     height: calc(100vh - 60px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+} */
+
+.landing {
+    margin: 25px;
 }
+
