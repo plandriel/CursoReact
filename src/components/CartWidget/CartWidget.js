@@ -12,9 +12,9 @@ function totalcarrito(){
 const CartWidget = () => {
     return (
         <il className="cart-btn"> 
-            <button onClick={totalcarrito}>
+            <div onClick={totalcarrito}>
                 <img src={shopcart} alt="Icono carrito" className="cart-widget" /> <span>4</span>
-            </button>
+            </div>
             {/* <p>4</p> */}
             
             

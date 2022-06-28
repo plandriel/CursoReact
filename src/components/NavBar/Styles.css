@@ -96,3 +96,7 @@ nav .enlaces a {
     nav .enlaces a:hover {
     border-bottom: 3px solid #ff6b09;
     transition: 0.6s; }
+
+nav .enlaces ul {
+    display: flex;
+}

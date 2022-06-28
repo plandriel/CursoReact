@@ -7,7 +7,7 @@ export const useCard = (stock) => {
         if (result <= stock) {
             setAmount(amount+value)
         }
-        if (amount<= 0) {
+        if (amount< 1) {
             setAmount(1)
         }
     }

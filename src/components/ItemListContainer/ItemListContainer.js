@@ -1,35 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css"
+import ItemList from '../ItemList/ItemList'
+import { getData } from '../../mocks/fakeApi'
+import loader from '../../assets/loader.gif'
 
-import { Card } from '../Cards/Card'
+// import { Card } from '../Cards/Card' //CARD DE CADA PRODUCTO
 
 
 const ItemListContainer = ({greeting}) => {
 
-    const [contador, setContador] = useState(0);
+    const [productList, setProductList] = useState([])
+    const [loading, setLoading] = useState(true)
 
-    const sumarCarrito = () => {
-
-        setContador(contador + 1)
-    }
-
-
-
-
+    useEffect(()=>{
+        getData
+        .then((res) => setProductList(res), console.log("test"))
+        .catch((error)=> console.log(error))
+        .finally(()=> setLoading(false))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
+    
     return (
         <div className="landing">
-            <div className='row justify-content-between m-5'>
-                <div className="col-3">
-                    <Card stock={10} nombreProducto='Servidor 1'/>
-                </div>
-                <div className="col-3">
-                    <Card stock={5} nombreProducto='Servidor 2' />
-                </div>
-                <div className="col-3">
-                    <Card stock={6} nombreProducto='Servidor 3' />
-                </div>
-            </div>
-            </div>
+            {loading ? <img  src={loader} alt="Loader gif" /> : <ItemList productList={productList} /> }
+            {/* <ItemList productList={productList} /> */}
+        </div>
     )
 }
 

@@ -3,7 +3,6 @@ import React from "react";
 import logo from "../../assets/logo.png"
 import "./Styles.css"
 import CartWidget from "../CartWidget/CartWidget"
-import ListaProductos from "../ListaProductos/ListaProductos";
 
 
 
