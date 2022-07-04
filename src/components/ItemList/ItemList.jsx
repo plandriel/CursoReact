@@ -11,8 +11,10 @@ const ItemList = ({productList}) => {
         // {productList.map((product)=><Card key={product.id} product={product} />)}
         // </div>
         
-        <div className='itemList'>
-            {productList.map((product)=><Card key={product.id} product={product} />)}
+        <div className="container">
+                <div className="row">
+                    {productList.map((product)=><Card key={product.id} product={product} />)}
+                </div>
         </div>
         
     )
