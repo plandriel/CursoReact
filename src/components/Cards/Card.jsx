@@ -1,13 +1,12 @@
 import React from 'react';
-import { useCard } from '../hooks/useCard'
+import { Link } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount'
 import "./styles.css"
 import shopcart from "../../assets/cartshop.png"
 
 export const Card = ({product}) => {
-    const { handleValue, amount } = useCard(product.stock)
 
     return (
-
                     <div className="col-md-3">
                         <div className="wsk-cp-product">
                             <div className="wsk-cp-img">
@@ -25,13 +24,12 @@ export const Card = ({product}) => {
                                 </div>
                                 <div className="card-footer">
                                     <div className="wcf-left"><span className="price">${product.price}</span></div>
-                                    <div className="wcf-right"><a href="/" className="buy-btn"><img src={shopcart} alt="Icono carrito" className="img-fluid" /></a></div>
+                                    <Link to="/cart"><div className="wcf-right"><a href="/" className="buy-btn"><img src={shopcart} alt="Icono carrito" className="img-fluid" /></a></div></Link>
                                 </div>
-                                <div className='d-flex flex-row p-2 align-items-center display-10 justify-content-between text-white'>
-                                    <button className="btn btn-danger p-2 fw-bold display-3" onClick={()=>handleValue(-1)}>-</button>
-                                <div className='display-6 text-secondary'>{amount}</div>
-                                    <button className="btn btn-success p-2 fw-bold display-3" onClick={()=>handleValue(+1)}>+</button>
-                                </div>
+                                {/* ItemCount SE ENCARGA DE VALIDAR EL STOCK Y DE VER LA CANTIDAD DE PRODUCTOS QUE ENVIA LA CARD*/}
+                                <ItemCount stock={product.stock} initial={1} />
+                                {/* LINK LLEVA A UN DETALLE MAS EXTENSO DEL PRODUCTO */}
+                                <Link to={`/detail/${product.id}`}><div className="detail text-center">Ver detalles</div></Link>
                                 <div className='text-sm text-center'>Stock disponible: {product.stock}</div>
                             </div>
                         </div>

@@ -206,3 +206,18 @@ body{
     color: #fff;
   }
   }
+
+  .detail {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 45px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    padding: 12px 30px;
+    border: 1px solid #313131;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+    border-radius: 27px;
+    transition: all 0.05s ease-in-out;
+  }

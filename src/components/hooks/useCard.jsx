@@ -11,8 +11,7 @@ export const useCard = (stock) => {
             setAmount(1)
         }
     }
-
-    return {
-        handleValue, amount
-    }
+return {
+    handleValue, amount
+};
 }

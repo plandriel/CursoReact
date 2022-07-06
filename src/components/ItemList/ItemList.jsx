@@ -6,11 +6,6 @@ import { Card } from "../Cards/Card"
 const ItemList = ({productList}) => {
 
     return (
-
-        // <div>
-        // {productList.map((product)=><Card key={product.id} product={product} />)}
-        // </div>
-        
         <div className="container">
                 <div className="row">
                     {productList.map((product)=><Card key={product.id} product={product} />)}

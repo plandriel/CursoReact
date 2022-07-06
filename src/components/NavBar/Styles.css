@@ -19,9 +19,9 @@ nav {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     z-index: 99; }
     .nav1 {
-    background: transparent;
+    background-color: aliceblue;
     height: 80px;
-    color: #fff; }
+    color: #000; }
     .nav2 {
     background: #f2f2f2;
     height: 100px;
@@ -52,10 +52,6 @@ nav {
 .logo, .logo img {
     height: 80px; }
 
-/*CARRITO*/
-/* .carrito {
-    margin: 10px;
-} */
 
 /* H1 HEADER TITULO */
 
@@ -99,4 +95,5 @@ nav .enlaces a {
 
 nav .enlaces ul {
     display: flex;
+    align-items: center;
 }
