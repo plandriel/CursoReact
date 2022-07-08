@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import "./styles.css"
 
-const ItemCount = ({ initial, stock }) => {
+const ItemCount = ({ initial, stock, onAdd }) => {
     const [count, setCount] = useState(initial);
 
     const add = () => {
@@ -11,6 +11,10 @@ const ItemCount = ({ initial, stock }) => {
     const substract = () => {
         initial !== count && setCount(count - 1);
     };
+
+    const handlerClickAddtoCart = () => {
+        onAdd(count);
+    }
     return (
         
         <div className="count">
@@ -19,6 +23,7 @@ const ItemCount = ({ initial, stock }) => {
                 <p>{count}</p>
                 <button onClick={add}>+</button>
             </div>
+            <button className='btn btn-primary' onClick={()=> handlerClickAddtoCart()}>Agregar</button>
         </div>
     );
 };
