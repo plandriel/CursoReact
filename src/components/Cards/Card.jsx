@@ -6,6 +6,8 @@ import shopcart from "../../assets/cartshop.png"
 
 export const Card = ({product}) => {
 
+    
+
     return (
                     <div className="col-md-3">
                         <div className="wsk-cp-product">

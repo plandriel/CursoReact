@@ -5,7 +5,7 @@ import loader from '../../assets/loader.gif'
 import { useParams } from 'react-router-dom';
 import { getProds } from '../../mocks/fakeApi';
 
-
+ 
 const ItemListContainer = ({greeting}) => {
     
 

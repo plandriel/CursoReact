@@ -1,15 +1,18 @@
 import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { cartContext } from '../Context/CartContext';
 
 const ItemDetail = ({ product }) => {
 
     const [compraFin, setCompraFin] = useState(false)
+    const { addProduct } = useContext(cartContext);
 
-    const onAdd = () =>{
-        console.log("onAdd");
+    const onAdd = (count) =>{
+        // console.log("onAdd");
         setCompraFin(true)
+        addProduct({...product, qty: count});
     }
     return (
         <div className="detail">

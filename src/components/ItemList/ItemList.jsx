@@ -1,7 +1,6 @@
 import React from "react";
 import "./Style.css"
 import { Card } from "../Cards/Card"
-// import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
 const ItemList = ({productList}) => {
 
