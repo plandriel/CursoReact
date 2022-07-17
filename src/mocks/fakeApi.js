@@ -12,11 +12,11 @@
 const products = [
     {
     id: 1,
-    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    price: 109.95,
-    description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    title: "HPE ProLiant ML110 Gen10",
+    price: 109,
+    description: "El servidor HPE ProLiant ML110 Gen10 es una torre mejorada con rendimiento, capacidad de expansión y crecimiento a un precio asequible. Satisface la mayoría de las necesidades empresariales de las pymes al tiempo que acelera la computación de su negocio. ProLiant ML110 Gen10 es un factor de forma de torre con un solo procesador que también puede colocarse en un armario de bastidor de servidor al utilizar 4,5U de espacio del bastidor. Incluye hasta cinco ranuras PCIe con espacio para ampliarse con 8 unidades de disco de factor de forma grande (LFF) o 16 de factor de forma reducido (SFF). Proporciona seis ranuras DDR4 DIMM que admiten HPE SmartMemory DDR4 con una capacidad máxima de 192 GB. ",
     category: "Hombres",
-    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    image: "https://http2.mlstatic.com/D_NQ_NP_962122-MLA49863081487_052022-O.webp",
     stock:5,
     rating: {
     rate: 3.9,
@@ -26,11 +26,11 @@ const products = [
     },
     {
     id: 2,
-    title: "Mens Casual Premium Slim Fit T-Shirts ",
-    price: 22.3,
-    description: "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+    title: "Servidor Hp Proliant Ml350 Gen9",
+    price: 22,
+    description: "Uno de los servidores perfectamente dimensionados de HP es el HP ProLiant ML350 Gen9: que entrega una combinación líder en su clase de rendimiento, disponibilidad, capacidad de ampliación, facilidad de gestión, fiabilidad y facilidad de servicio. Proponiendo las capacidades estándar de HP Integrated Lights-Out (iLO) para una gestión simplificada de la infraestructura de TI, ranuras para DDR4 HP SmartMemory con un rendimiento hasta un 14 % superior1 (un máximo de 48 unidades) y un NIC integrado de x4 1 GbE",
     category: "Hombres",
-    image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    image: "https://http2.mlstatic.com/D_NQ_NP_762348-MLA43822458570_102020-O.webp",
     stock:5,
     rating: {
     rate: 4.1,
@@ -39,11 +39,11 @@ const products = [
     },
     {
     id: 3,
-    title: "Mens Cotton Jacket",
-    price: 55.99,
-    description: "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+    title: "HPE PROLIANT DL380 GEN10",
+    price: 103900.99,
+    description: "El servidor HPE ProLiant DL380 Gen10 ofrece lo último en seguridad, rendimiento y capacidad de expansión, respaldado por una garantía completa. Estandarizado en la plataforma de procesamiento más fiable del sector. Implemente, actualice, supervise y mantenga su servidor con facilidad al automatizar las tareas esenciales de gestión del ciclo de vida del servidor con HPE OneView y HPE Integrated Lights Out 5 (iLO 5). Implemente esta plataforma 2P segura para diversas cargas de trabajo en entornos con limitaciones de espacio.",
     category: "Hombres",
-    image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+    image: "https://www.tradeinn.com/f/13786/137860170/hpe-proliant-dl380-gen10-intel-xeon-gold-6234.jpg",
     stock:15,
     rating: {
     rate: 4.7,
@@ -53,10 +53,10 @@ const products = [
     {
     id: 4,
     title: "Mens Casual Slim Fit",
-    price: 15.99,
+    price: 16,
     description: "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
     category: "Hombres",
-    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    image: "https://http2.mlstatic.com/D_NQ_NP_762348-MLA43822458570_102020-O.webp",
     stock:6,
     rating: {
     rate: 2.1,
@@ -69,7 +69,7 @@ const products = [
     price: 695,
     description: "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
     category: "Joyas",
-    image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    image: "https://http2.mlstatic.com/D_NQ_NP_762348-MLA43822458570_102020-O.webp",
     stock:4,
     rating: {
     rate: 4.6,

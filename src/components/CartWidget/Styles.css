@@ -12,10 +12,14 @@
 
 .cart-widget {
     width: 40px;
+    position: relative;
+    left: -0.4rem;
 }
 
-.cart-btn span {
-    position: absolute;
+.cart-btn p {
+    position: relative;
+    right: 1rem;
+    bottom: -2.5rem;
     padding: 0.1rem;
     min-width: 2rem;
     background-color: rgb(255, 21, 0);

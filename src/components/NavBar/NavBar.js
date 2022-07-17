@@ -38,6 +38,7 @@ const categories = [
 
 
 const NavBar = () => {
+    
     return (
         <header>
             <nav id="nav" className="nav1">
@@ -50,14 +51,15 @@ const NavBar = () => {
                         {categories.map((category) => (
                             <Link to={category.path} key={category.id}>{category.name}</Link>
                         ))}
+                        {}
                         <Link to="/cart"><CartWidget /></Link>
                     </ul>
                     </div>
                 </div>
             </nav>
-            <div class="textos">
-            <h1 class="animate__fadeInRight">PergaminoIT</h1>
-            <h2 class="animate__fadeInRight">Tienda Online</h2>
+            <div className="textos">
+            <h1 className="animate__fadeInRight">PergaminoIT</h1>
+            <h2 className="animate__fadeInRight">Tienda Online</h2>
         </div>
         </header>
     )

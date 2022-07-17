@@ -11,11 +11,11 @@ const CartWidget = () => {
     const {qtyProducts} = useContext(cartContext)
 
     return (
-        <il className="cart-btn"> 
-            <div onClick={totalcarrito}>
+        <ul className="cart-btn"> 
+            <div className="d-flex" onClick={totalcarrito}>
                 <img src={shopcart} alt="Icono carrito" className="cart-widget" /> <p>{qtyProducts}</p>
             </div>
-        </il>
+        </ul>
     )
 }
 
