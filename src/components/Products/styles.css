@@ -1,0 +1,60 @@
+.navCategory1 {
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    z-index: 99; }
+    .navCategory1 {
+    background-color: aliceblue;
+    height: 80px;
+    color: #000; }
+    .navCategory2 {
+    background: #f2f2f2;
+    height: 100px;
+    color: #000; }
+    .contenedor-nav-products {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    height: inherit;
+    overflow: hidden; }
+    .navCategory1 .enlacesCategory a {
+    display: inline-block;
+    padding: 10px 0;
+    margin-right: 17px;
+    font-size: 17px;
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: inherit; }
+    .navCategory1 .enlacesCategory a:hover {
+    border-bottom: 3px solid #ff6b09;
+    transition: 0.6s; }
+    
+
+/* H1 HEADER TITULO */
+
+
+.navCategory1 .enlacesCategory a {
+    display: inline-block;
+    padding: 5px 0;
+    margin-right: 17px;
+    font-size: 17px;
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: inherit; }
+    
+    .navCategory1 .enlacesCategory a:hover {
+    border-bottom: 3px solid #ff6b09;
+    transition: 0.6s; }
+
+.navCategory .enlacesCategory ul {
+    display: flex;
+    align-items: center;
+}
+
+
+

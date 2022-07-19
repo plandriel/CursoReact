@@ -4,11 +4,11 @@ import ItemList from '../ItemList/ItemList'
 import loader from '../../assets/loader.gif'
 import { useParams } from 'react-router-dom';
 import { getProds } from '../../mocks/fakeApi';
+import { db } from "../../firebase/firebase"
+import {getDocs, collection, query, where} from "firebase/firestore"
 
- 
 const ItemListContainer = ({greeting}) => {
     
-
     const [productList, setProductList] = useState([])
 
     // ESTADO INICIAL DEL LOADER EN VERDADERO
@@ -16,9 +16,34 @@ const ItemListContainer = ({greeting}) => {
 
     // PARAMETRO PARA ENCONTRAR LA CATEGORIA DE LOS PRODUCTOS Y PODER FILTRARLOS
     const { categoryId } = useParams();
-    
+
     useEffect(() => {
         setLoading(true);
+
+        //const productsCollection = collection(db, 'productos');
+        //const q = query(productsCollection, where('category','==', categoryId))
+        const q = categoryId
+            ? query(collection(db, 'productos'), where('category', '==', categoryId))
+            : collection(db, 'productos');
+
+        getDocs(q)
+            .then(result => {
+                const lista = result.docs.map(product =>{
+                    return {
+                        id: product.id,
+                        ...product.data()
+                    }
+                })
+                setProductList(lista)
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+        }, [categoryId]);
+    
 
         // EN CASO DE USAR UNA API EXTERNA, SE USA DE LA SIGUIENTE MANERA (FETCH):
         // const URL = categoryId
@@ -35,17 +60,19 @@ const ItemListContainer = ({greeting}) => {
         //     });
 
         // USO DEL THEN PARA OBTENER LA PROMESTA "GETPRODS" Y REALIZAR THEN, CATCH Y FINALLY EN CASO DE ERROR.
-        getProds(categoryId)
-            .then((res) => {
-                setProductList(res);
-            })
-            .catch((error) => {
-                console.log(error);
-            })
-            .finally(() => {
-                setLoading(false);
-            });
-    }, [categoryId]);
+        
+        // uso de API local
+    //     getProds(categoryId)
+    //         .then((res) => {
+    //             setProductList(res);
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         })
+    //         .finally(() => {
+    //             setLoading(false);
+    //         });
+    // }, [categoryId]);
 
     // USEEFFECT SI SE USA FETCH PARA OBTENER LOS DATOS
     // useEffect(()=>{
@@ -69,4 +96,4 @@ const ItemListContainer = ({greeting}) => {
     )
 }
 
-export default ItemListContainer;
+export default ItemListContainer

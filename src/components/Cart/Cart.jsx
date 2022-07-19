@@ -25,41 +25,41 @@ const Cart = () => {
     return (
         <>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-        <div class="container" >
-            <div class="wrapper wrapper-content animated fadeInRight">
-                <div class="row">
-                    <div class="col-md-9">
-                        <div class="ibox">
-                            <div class="ibox-title">
-                                <span class="pull-right">(<strong>{products.qty}</strong>) Productos</span>
+        <div className="container" >
+            <div className="wrapper wrapper-content animated fadeInRight">
+                <div className="row">
+                    <div className="col-md-9">
+                        <div className="ibox">
+                            <div className="ibox-title">
+                                {/* <span className="pull-right">(<strong>{products.count}</strong>) Productos</span> */}
                                 <h5>Productos en el carrito</h5>
                             </div>
                             {products.map(product => 
-                                                <div class="ibox-content" key={product.id}>
-                                                    <div class="table-responsive">
-                                                        <table class="table shoping-cart-table">
+                                                <div className="ibox-content" key={product.id}>
+                                                    <div className="table-responsive">
+                                                        <table className="table shoping-cart-table">
                                                             <tbody>
                                                             <tr>
                                                                 <td width="90">
-                                                                    <div class="cart-product-imitation">
+                                                                    <div className="cart-product-imitation">
                                                                     </div>
                                                                 </td>
-                                                                <td class="desc">
+                                                                <td className="desc">
                                                                     <h3>
-                                                                    <Link to="/" class="text-navy">
+                                                                    <Link to="/" className="text-navy">
                                                                         {product.title}
                                                                     </Link>
                                                                     </h3>
-                                                                    <p class="small">
+                                                                    <p className="small">
                                                                     {product.description}
                                                                     </p>
-                                                                    <dl class="small m-b-none">
+                                                                    <dl className="small m-b-none">
                                                                         <dt>{product.description}</dt>
                                                                         <dd>{product.description}</dd>
                                                                     </dl>
                                 
-                                                                    <div class="m-t-sm">
-                                                                        <button class="text-muted" onClick={()=>deleteProduct(product.id)}><i class="fa fa-trash" ></i> Borrar del carrito</button>
+                                                                    <div className="m-t-sm">
+                                                                        <button className="text-muted" onClick={()=>deleteProduct(product.id)}><i className="fa fa-trash" ></i> Borrar del carrito</button>
                                                                     </div>
                                                                 </td>
                                 
@@ -68,7 +68,7 @@ const Cart = () => {
                                                                 <td >
                                                                 <h5>Cantidad: {product.qty}</h5>
 {/*                                                                 
-                                                                    <input type="text" class="form-control" placeholder={product.qty}></input> */}
+                                                                    <input type="text" className="form-control" placeholder={product.qty}></input> */}
                                                                 </td>
                                                                 <td>
                                                                     <h4>
@@ -82,46 +82,46 @@ const Cart = () => {
                                                 </div>
                                                 
                             )}
-                            <div class="ibox-content">
-                                <button class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i> Finalizar compra</button>
-                                <Link to='/'><p class="btn btn-white"><i class="fa fa-arrow-left"></i> Continuar comprando</p></Link>
+                            <div className="ibox-content">
+                                <button className="btn btn-primary pull-right"><i className="fa fa fa-shopping-cart"></i> Finalizar compra</button>
+                                <Link to='/'><p className="btn btn-white"><i className="fa fa-arrow-left"></i> Continuar comprando</p></Link>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="ibox">
-                            <div class="ibox-title">
+                    <div className="col-md-3">
+                        <div className="ibox">
+                            <div className="ibox-title">
                                 <h5>Total en el carrito</h5>
                             </div>
-                            <div class="ibox-content">
+                            <div className="ibox-content">
                                 <span>
                                     Total
                                 </span>
-                                <h2 class="font-bold">
+                                <h2 className="font-bold">
                                 $ {calcularTotal()}
                                 </h2>
             
                                 <hr />
-                                <span class="text-muted small">
+                                <span className="text-muted small">
                                     *Solo envios en Argentina
                                 </span>
-                                <div class="m-t-sm">
-                                    <div class="btn-group">
-                                    <Link to="/cart" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i> Pagar</Link>
-                                    <Link to="/" class="btn btn-white btn-sm"> Cancelar</Link>
+                                <div className="m-t-sm">
+                                    <div className="btn-group">
+                                    <Link to="/cart" className="btn btn-primary btn-sm"><i className="fa fa-shopping-cart"></i> Pagar</Link>
+                                    <Link to="/" className="btn btn-white btn-sm"> Cancelar</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
             
-                        <div class="ibox">
-                            <div class="ibox-title">
+                        <div className="ibox">
+                            <div className="ibox-title">
                                 <h5>Soporte</h5>
                             </div>
-                            <div class="ibox-content text-center">
-                                <h3><i class="fa fa-phone"></i> +43 100 783 001</h3>
-                                <span class="small">
+                            <div className="ibox-content text-center">
+                                <h3><i className="fa fa-phone"></i> +43 100 783 001</h3>
+                                <span className="small">
                                     Estamos las 24hs disponibles
                                 </span>
                             </div>

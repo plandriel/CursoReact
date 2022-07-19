@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from "../../assets/logo.png"
 import "./Styles.css"
 import CartWidget from "../CartWidget/CartWidget"
+import { Products } from "../Products/Products";
 //import loader from '../../assets/loader.gif'
 
 
@@ -16,23 +17,18 @@ const categories = [
     },
     {
         id: 2,
-        path: '/category/Hombres',
-        name: 'Hombres',
+        path: '/category/Servidores',
+        name: 'Servidores',
     },
     {
         id: 3,
-        path: '/category/Mujeres',
-        name: 'Mujeres',
+        path: '/category/Monitores',
+        name: 'Monitores',
     },
     {
         id: 4,
-        path: '/category/Joyas',
-        name: 'Joyas',
-    },
-    {
-        id: 5,
-        path: '/category/Electronica',
-        name: 'Electronica',
+        path: '/category/Almacenamiento',
+        name: 'Almacenamiento',
     },
 ];
 
@@ -51,7 +47,7 @@ const NavBar = () => {
                         {categories.map((category) => (
                             <Link to={category.path} key={category.id}>{category.name}</Link>
                         ))}
-                        {}
+                        {/* <Link to="/productos">Productos</Link> */}
                         <Link to="/cart"><CartWidget /></Link>
                     </ul>
                     </div>

@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { getProd } from '../../mocks/fakeApi'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import loader from '../../assets/loader.gif'
+import { db } from "../../firebase/firebase"
+import { doc, getDoc, collection } from "firebase/firestore"
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
@@ -13,16 +15,33 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         setLoading(true);
 
-        getProd(id)
-            .then((res) => {
-                setProduct(res);
+        const productsCollection = collection(db, 'productos');
+        const refDoc = doc(productsCollection,id)
+        
+        getDoc(refDoc)
+            .then(result => {
+                setProduct({
+                    id: result.id,
+                    ...result.data(),
+                })
             })
             .catch((error) => {
                 console.log(error);
             })
             .finally(() => {
                 setLoading(false);
-            }); 
+            });
+
+        // getProd(id)
+        //     .then((res) => {
+        //         setProduct(res);
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        //     })
+        //     .finally(() => {
+        //         setLoading(false);
+        //     }); 
     }, [id]
     );
 
